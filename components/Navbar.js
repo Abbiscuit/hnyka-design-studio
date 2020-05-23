@@ -5,20 +5,23 @@ import Link from 'next/link';
 const Navbar = () => {
   return (
     <Div>
+      <Link href="/" passHref>
+        <HomeLink>Hnyka.</HomeLink>
+      </Link>
       <Ul>
         <li>
-          <Link href="/">
+          <Link href="/" passHref>
             <a>Home</a>
           </Link>
         </li>
         <li>
-          <Link href="/">
-            <a>Home</a>
+          <Link href="/about" passHref>
+            <a>About</a>
           </Link>
         </li>
         <li>
-          <Link href="/">
-            <a>Home</a>
+          <Link href="/contact" passHref>
+            <a>Contact</a>
           </Link>
         </li>
       </Ul>
@@ -32,7 +35,7 @@ const Div = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 8px 10px;
   height: 64px;
   background-color: #fff;
@@ -55,4 +58,10 @@ const Ul = styled.ul`
       font-size: 12px;
     }
   }
+`;
+
+const HomeLink = styled.a`
+  font-size: 16px;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.black};
 `;

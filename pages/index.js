@@ -1,9 +1,10 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import styled from 'styled-components';
 import Layout from '../components/Layout';
 import Card from '../components/Card';
 import Box from '../components/Box';
+
+import { MainHeading } from '../components/styles/fonts';
 
 const Index = () => {
   return (
@@ -41,11 +42,3 @@ const Index = () => {
 };
 
 export default Index;
-
-const MainHeading = styled.h1`
-  font-size: 24px;
-  margin-bottom: 24px;
-
-  color: ${({ theme }) => theme.colors.black};
-  font-weight: normal;
-`;

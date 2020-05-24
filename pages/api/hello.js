@@ -1,6 +1,9 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 export default (req, res) => {
-  res.statusCode = 200;
-  res.json({ name: 'John Doe' });
+  try {
+    res.status(200).json({ message: 'John Doe 3rd' });
+  } catch (err) {
+    console.error(err.message);
+  }
 };
